@@ -1,0 +1,3 @@
+C:\Users\Đorđe Anđić\source\repos\HospitalApp\HospitalApp\obj\Debug\HospitalApp.njsproj.AssemblyReference.cache
+C:\Users\Đorđe Anđić\source\repos\HospitalApp\HospitalApp\obj\Debug\HospitalApp.njsproj.CoreCompileInputs.cache
+C:\Users\Đorđe Anđić\source\repos\HospitalApp\HospitalApp\bin\Microsoft.NodejsTools.WebRole.dll
