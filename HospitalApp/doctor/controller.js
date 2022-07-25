@@ -23,8 +23,19 @@ const addDoctor=(req,res)=>{
         [id,name,age,specialization],
         (error,results)=>{
             if(error)throw error;
-            res.status(201);
-            alert("Doctor added sucsesffuly!");
+            res.status(201).send("Doctor created successfuly");
+        }
+    )
+}
+
+const deleteDoctor =(req,res)=>{
+    const id = parseInt(req.params.id);
+    pool.query(
+        queries.deleteDoctor,
+        [id],
+        (error,result)=>{
+            if(error)throw error;
+            res.status(201).send("Doctor deleted successfuly");
         }
     )
 }
@@ -33,4 +44,5 @@ module.exports = {
     getDoctors,
     getDoctorByID,
     addDoctor,
+    deleteDoctor,
 }
