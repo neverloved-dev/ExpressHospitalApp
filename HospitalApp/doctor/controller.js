@@ -40,9 +40,23 @@ const deleteDoctor =(req,res)=>{
     )
 }
 
+const updateDoctor =(req,res)=>{
+    const id = parseInt(req.params.id);
+    const age = parseInt(req.body);
+    pool.query(
+        queries.updateDoctor,
+        [age,id],
+        (error,result)=>{
+            if(error)throw error;
+            res.status(201).send("Doctor age updated successfuly");
+        }
+    )
+}
+
 module.exports = {
     getDoctors,
     getDoctorByID,
     addDoctor,
     deleteDoctor,
+    updateDoctor,
 }

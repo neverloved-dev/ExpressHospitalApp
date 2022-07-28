@@ -17,7 +17,15 @@ const getPatient = (req,res)=>{
 }
 
 const updatePatientData = (req,res)=>{
-
+    const id = parseInt(req.params.id);
+    const name = req.body;
+    pool.query(
+        query.updatePatientData,[name,id],
+        (error,result)=>{
+            if(error)throw error;
+            res.status(201).send("Patient name updated").send(result.fields);
+        }
+    )
 }
 
 const removePatient = (req,res)=>{
